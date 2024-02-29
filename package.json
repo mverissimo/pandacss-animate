@@ -5,7 +5,7 @@
   "scripts": {
     "build": "pnpm -r --filter=./packages/** build",
     "clean": "pnpm -r --filter=./packages/** clean && rm -rf node_modules",
-    "typecheck": "tsc --no-emit",
+    "typecheck": "tsc --noEmit",
     "release": "changesets release",
     "website": "pnpm --filter=./website"
   },
@@ -13,6 +13,7 @@
     "@biomejs/biome": "^1.5.3",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "^2.27.1",
-    "lefthook": "^1.6.4"
+    "lefthook": "^1.6.4",
+    "typescript": "^5"
   }
 }

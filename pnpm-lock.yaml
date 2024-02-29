@@ -16,6 +16,9 @@ importers:
       lefthook:
         specifier: ^1.6.4
         version: 1.6.4
+      typescript:
+        specifier: ^5
+        version: 5.3.3
 
   packages/animate:
     devDependencies:
@@ -4230,7 +4233,6 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   /ufo@1.4.0:
     resolution: {integrity: sha512-Hhy+BhRBleFjpJ2vchUNN40qgkh0366FWJGqVLYBHev0vpHTrXSA0ryT+74UiW6KWsldNurQMKGqCm1M2zBciQ==}
