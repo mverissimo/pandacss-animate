@@ -157,21 +157,6 @@ export default definePreset({
   },
   utilities: {
     extend: {
-      animate: {
-        values: ["in", "out"],
-        className: "animate",
-        transform(value) {
-          return {
-            animationName: value === "in" ? "enter" : "exit",
-            animationDuration: "var(--panda-animation-duration, 300ms)",
-            "--panda-enter-opacity": "initial",
-            "--panda-enter-scale": "initial",
-            "--panda-enter-rotate": "initial",
-            "--panda-enter-translate-x": "initial",
-            "--panda-enter-translate-y": "initial",
-          };
-        },
-      },
       duration: {
         values: "durations",
         transform(value) {
@@ -180,19 +165,15 @@ export default definePreset({
           };
         },
       },
-      animationDelay: {
-        values: "durations",
-        transform(value) {
-          return {
-            animationDelay: value,
-          };
-        },
-      },
       fadeIn: {
         className: "fade-in",
         values: "opacity",
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "enter",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-enter-opacity": value,
           };
         },
@@ -200,8 +181,12 @@ export default definePreset({
       fadeOut: {
         className: "fade-out",
         values: "opacity",
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "exit",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-exit-opacity": value,
           };
         },
@@ -209,8 +194,12 @@ export default definePreset({
       zoomIn: {
         className: "zoom-in",
         values: SCALE,
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "enter",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-enter-scale": value,
           };
         },
@@ -218,8 +207,12 @@ export default definePreset({
       zoomOut: {
         className: "zoom-out",
         values: SCALE,
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "exit",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-exit-scale": value,
           };
         },
@@ -227,8 +220,12 @@ export default definePreset({
       spinIn: {
         className: "spin-in",
         values: ROTATE,
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "enter",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-enter-rotate": `${value}deg`,
           };
         },
@@ -236,8 +233,12 @@ export default definePreset({
       spinOut: {
         className: "spin-out",
         values: ROTATE,
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "exit",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-exit-rotate": `${value}deg`,
           };
         },
@@ -245,35 +246,51 @@ export default definePreset({
       slideInY: {
         className: "slide-in-y",
         values: "spacing",
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "enter",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-enter-translate-y": value,
-          };
-        },
-      },
-      slideInX: {
-        className: "slide-in-x",
-        values: "spacing",
-        transform(value) {
-          return {
-            "--panda-enter-translate-x": value,
           };
         },
       },
       slideOutY: {
         className: "slide-out-y",
         values: "spacing",
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "exit",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-exit-translate-y": value,
+          };
+        },
+      },
+      slideInX: {
+        className: "slide-in-x",
+        values: "spacing",
+        transform(value, { token }) {
+          return {
+            animationName: "enter",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
+            "--panda-enter-translate-x": value,
           };
         },
       },
       slideOutX: {
         className: "slide-out-x",
         values: "spacing",
-        transform(value) {
+        transform(value, { token }) {
           return {
+            animationName: "exit",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
             "--panda-exit-translate-x": value,
           };
         },
