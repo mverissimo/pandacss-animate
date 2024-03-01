@@ -4,7 +4,7 @@
     "enabled": true
   },
   "files": {
-    "ignore": ["dist", ".next"]
+    "ignore": ["dist", ".next", "node_modules"]
   },
   "formatter": {
     "indentStyle": "space"
