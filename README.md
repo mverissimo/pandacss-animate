@@ -37,6 +37,7 @@ Use some of these utilities `fadeOut`, `slideOutY`, `slideOutX`, `spinOut`, `zoo
 ### Fade
 
 | key | value |
+|-----|-------|
 | fadeIn | opacity tokens |
 | fadeOut | opacity tokens |
 
@@ -55,6 +56,7 @@ import { css } from "../styled-system/css";
 ### Slide
 
 | key | value |
+|-----|-------|
 | slideInX | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
 | slideOutX | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
 | slideInY | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
@@ -87,6 +89,7 @@ import { css } from "../styled-system/css";
 ### Spin
 
 | key | value |
+|-----|-------|
 | spinIn | "0", "1", "2", "3", "6", "12", "45", "90", "180" |
 | spinOut | "0", "1", "2", "3", "6", "12", "45", "90", "180" |
 
@@ -105,6 +108,7 @@ import { css } from "../styled-system/css";
 ### Zoom
 
 | key | value |
+|-----|-------|
 | zoomIn | "0", "0.5", "0.75", "0.90", "0.95", "1", "1.05", "1.1", "1.25", "1.5" |
 | zoomOut | "0", "0.5", "0.75", "0.90", "0.95", "1", "1.05", "1.1", "1.25", "1.5" |
 
@@ -126,4 +130,4 @@ To use a custom value consider use [strict tokes](https://panda-css.com/docs/con
 
 ## Acknowledgement
 
-This preset was inspired on [tailwind-animate](https://github.com/jamiebuilds/tailwindcss-animate)
+This preset was inspired by [tailwind-animate](https://github.com/jamiebuilds/tailwindcss-animate) 🚀
