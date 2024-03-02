@@ -191,29 +191,29 @@ export default definePreset({
           };
         },
       },
-      zoomIn: {
-        className: "zoom-in",
-        values: SCALE,
+      slideInY: {
+        className: "slide-in-y",
+        values: "spacing",
         transform(value, { token }) {
           return {
             animationName: "enter",
             animationDuration: `var(--panda-animation-duration, ${token(
               "durations.300",
             )})`,
-            "--panda-enter-scale": value,
+            "--panda-enter-translate-y": value,
           };
         },
       },
-      zoomOut: {
-        className: "zoom-out",
-        values: SCALE,
+      slideOutY: {
+        className: "slide-out-y",
+        values: "spacing",
         transform(value, { token }) {
           return {
             animationName: "exit",
             animationDuration: `var(--panda-animation-duration, ${token(
               "durations.300",
             )})`,
-            "--panda-exit-scale": value,
+            "--panda-exit-translate-y": value,
           };
         },
       },
@@ -243,32 +243,6 @@ export default definePreset({
           };
         },
       },
-      slideInY: {
-        className: "slide-in-y",
-        values: "spacing",
-        transform(value, { token }) {
-          return {
-            animationName: "enter",
-            animationDuration: `var(--panda-animation-duration, ${token(
-              "durations.300",
-            )})`,
-            "--panda-enter-translate-y": value,
-          };
-        },
-      },
-      slideOutY: {
-        className: "slide-out-y",
-        values: "spacing",
-        transform(value, { token }) {
-          return {
-            animationName: "exit",
-            animationDuration: `var(--panda-animation-duration, ${token(
-              "durations.300",
-            )})`,
-            "--panda-exit-translate-y": value,
-          };
-        },
-      },
       slideInX: {
         className: "slide-in-x",
         values: "spacing",
@@ -292,6 +266,32 @@ export default definePreset({
               "durations.300",
             )})`,
             "--panda-exit-translate-x": value,
+          };
+        },
+      },
+      zoomIn: {
+        className: "zoom-in",
+        values: SCALE,
+        transform(value, { token }) {
+          return {
+            animationName: "enter",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
+            "--panda-enter-scale": value,
+          };
+        },
+      },
+      zoomOut: {
+        className: "zoom-out",
+        values: SCALE,
+        transform(value, { token }) {
+          return {
+            animationName: "exit",
+            animationDuration: `var(--panda-animation-duration, ${token(
+              "durations.300",
+            )})`,
+            "--panda-exit-scale": value,
           };
         },
       },
