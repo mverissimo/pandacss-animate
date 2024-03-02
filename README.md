@@ -36,9 +36,9 @@ Use some of these utilities `fadeOut`, `slideOutY`, `slideOutX`, `spinOut`, `zoo
 
 ### Fade
 
-| key | value |
-|-----|-------|
-| fadeIn | opacity tokens |
+| key     | value          |
+| ------- | -------------- |
+| fadeIn  | opacity tokens |
 | fadeOut | opacity tokens |
 
 ```tsx
@@ -55,11 +55,11 @@ import { css } from "../styled-system/css";
 
 ### Slide
 
-| key | value |
-|-----|-------|
-| slideInX | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
+| key       | value                                                                    |
+| --------- | ------------------------------------------------------------------------ |
+| slideInX  | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
 | slideOutX | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
-| slideInY | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
+| slideInY  | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
 | slideOutY | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
 
 To animate an element sliding from the left/top, apply a negative value, while a positive value will achieve the sliding effect from the right/bottom, eg:
@@ -88,10 +88,10 @@ import { css } from "../styled-system/css";
 
 ### Spin
 
-| key | value |
-|-----|-------|
-| spinIn | "0", "1", "2", "3", "6", "12", "45", "90", "180" |
-| spinOut | "0", "1", "2", "3", "6", "12", "45", "90", "180" |
+| key     | value                          |
+| ------- | ------------------------------ |
+| spinIn  | 0, 1, 2, 3, 6, 12, 45, 90, 180 |
+| spinOut | 0, 1, 2, 3, 6, 12, 45, 90, 180 |
 
 ```tsx
 import { css } from "../styled-system/css";
@@ -107,10 +107,10 @@ import { css } from "../styled-system/css";
 
 ### Zoom
 
-| key | value |
-|-----|-------|
-| zoomIn | "0", "0.5", "0.75", "0.90", "0.95", "1", "1.05", "1.1", "1.25", "1.5" |
-| zoomOut | "0", "0.5", "0.75", "0.90", "0.95", "1", "1.05", "1.1", "1.25", "1.5" |
+| key     | value                                             |
+| ------- | ------------------------------------------------- |
+| zoomIn  | 0, 0.5, 0.75, 0.90, 0.95, 1, 1.05, 1.1, 1.25, 1.5 |
+| zoomOut | 0, 0.5, 0.75, 0.90, 0.95, 1, 1.05, 1.1, 1.25, 1.5 |
 
 ```tsx
 import { css } from "../styled-system/css";
@@ -121,6 +121,23 @@ import { css } from "../styled-system/css";
   })}
 >
   A zoom in transition
+</button>;
+```
+
+## Duration
+
+To change a animation duration use the `duration` util, eg:
+
+```tsx
+import { css } from "../styled-system/css";
+
+<button
+  className={css({
+    fadeIn: "10",
+    duration: "500",
+  })}
+>
+  A fade transition
 </button>;
 ```
 
