@@ -1,0 +1,49 @@
+{
+  "name": "pandacss-animate",
+  "version": "1.0.0",
+  "description": "A Panda CSS preset for creating beautiful animations.",
+  "author": "Matheus Verissimo <mverissimoo@hotmail.com>",
+  "homepage": "https://github.com/mverissimo/galaxy#readme",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mverissimo/galaxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mverissimo/galaxy/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist; rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.33.0",
+    "tsup": "^8.0.2"
+  }
+}
