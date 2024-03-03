@@ -1,14 +1,16 @@
 # PandaCSS animate
 
-A Panda CSS preset for creating beautiful animations.
+PandaCSS Animate is a preset for Panda CSS designed to facilitate the creation of elegant animations within your projects.
 
 ## Installation
+
+Install PandaCSS Animate via npm:
 
 ```sh
 npm install -D pandacss-animate
 ```
 
-Then add the preset to your `panda.config.ts` file:
+Then, integrate the preset into your `panda.config.ts` file as follows:
 
 ```ts
 import { defineConfig } from "@pandacss/dev";
@@ -28,18 +30,15 @@ The preset offers utilities to enter and exit animations.
 
 ## Enter animations
 
-Use some of these utilities `fadeIn`, `slideInY`, `slideInX`, `spinIn`, `zoomIn`, to give an element an enter animation.
+Avaible utilities `fadeIn`, `slideInY`, `slideInX`, `spinIn`, `zoomIn`, to enter animations to elements.
 
 ## Exit animations
 
-Use some of these utilities `fadeOut`, `slideOutY`, `slideOutX`, `spinOut`, `zoomOut`, to give an element an exit animation.
+Avaible utilities `fadeOut`, `slideOutY`, `slideOutX`, `spinOut`, `zoomOut`, to exit animations to elements.
 
 ### Fade
 
-| key     | value          |
-| ------- | -------------- |
-| fadeIn  | opacity tokens |
-| fadeOut | opacity tokens |
+The fade animations include `fadeIn` and `fadeOut`, utilizing opacity tokens.
 
 ```tsx
 import { css } from "../styled-system/css";
@@ -55,14 +54,7 @@ import { css } from "../styled-system/css";
 
 ### Slide
 
-| key       | value                                                                    |
-| --------- | ------------------------------------------------------------------------ |
-| slideInX  | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
-| slideOutX | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
-| slideInY  | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
-| slideOutY | [spacing tokens](https://panda-css.com/docs/customization/theme#spacing) |
-
-To animate an element sliding from the left/top, apply a negative value, while a positive value will achieve the sliding effect from the right/bottom, eg:
+Slide animations include `slideInX`, `slideOutX`, `slideInY`, and `slideOutY`, using spacing tokens to determine direction and distance.
 
 ```tsx
 import { css } from "../styled-system/css";
@@ -88,10 +80,7 @@ import { css } from "../styled-system/css";
 
 ### Spin
 
-| key     | value                          |
-| ------- | ------------------------------ |
-| spinIn  | 0, 1, 2, 3, 6, 12, 45, 90, 180 |
-| spinOut | 0, 1, 2, 3, 6, 12, 45, 90, 180 |
+Spin animations include `spinIn` and `spinOut`, utilizing various degree values.
 
 ```tsx
 import { css } from "../styled-system/css";
@@ -107,10 +96,7 @@ import { css } from "../styled-system/css";
 
 ### Zoom
 
-| key     | value                                             |
-| ------- | ------------------------------------------------- |
-| zoomIn  | 0, 0.5, 0.75, 0.90, 0.95, 1, 1.05, 1.1, 1.25, 1.5 |
-| zoomOut | 0, 0.5, 0.75, 0.90, 0.95, 1, 1.05, 1.1, 1.25, 1.5 |
+Zoom animations consist of `zoomIn` and `zoomOut`, allowing for scaling effects.
 
 ```tsx
 import { css } from "../styled-system/css";
@@ -126,7 +112,7 @@ import { css } from "../styled-system/css";
 
 ## Duration
 
-To change a animation duration use the `duration` util, eg:
+Modify the duration of animations using the `duration` utility.
 
 ```tsx
 import { css } from "../styled-system/css";
@@ -143,7 +129,7 @@ import { css } from "../styled-system/css";
 
 ## Arbitrary value
 
-To use a custom value consider use [strict tokes](https://panda-css.com/docs/concepts/writing-styles#stricttokens)
+For custom values, consider utilizing [strict tokes](https://panda-css.com/docs/concepts/writing-styles#stricttokens) provided by Panda CSS.
 
 ## Acknowledgement
 
