@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "A Panda CSS preset for creating beautiful animations.",
   "author": "Matheus Verissimo <mverissimoo@hotmail.com>",
-  "homepage": "https://github.com/mverissimo/galaxy#readme",
+  "homepage": "https://github.com/mverissimo/pandacss-animate#readme",
   "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -29,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mverissimo/galaxy.git"
+    "url": "git+https://github.com/mverissimo/pandacss-animate.git"
   },
   "bugs": {
-    "url": "https://github.com/mverissimo/galaxy/issues"
+    "url": "https://github.com/mverissimo/pandacss-animate/issues"
   },
   "publishConfig": {
     "access": "public"
